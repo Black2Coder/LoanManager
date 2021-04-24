@@ -1,0 +1,59 @@
+<%- include('./base.ejs') %>
+
+
+
+
+
+
+    <div class="container mt-md-5 " style="width: 50rem;">
+        <form action="/home" method="GET">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Full Name As per Document" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="number" class="form-control" name="phone" placeholder="Phone" required>
+            </div>
+            <div class="form-group">
+                <label for="pancard">Amount of Loan</label>
+                <input type="number" class="form-control" name="amount" placeholder="Amount of Loan" required>
+
+            </div>
+
+            <div class="form-group">
+                <label for="adhar">Adhaar</label>
+                <input type="number" class="form-control" name="adhar" placeholder="Adhar" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+        formSubmit.addEventListener('click', (event) => {
+            event.preventDefault();  // 👈
+
+            // ...send the form data and get a response asynchronously
+        });
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    </body>
+
+    </html>
