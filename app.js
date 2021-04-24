@@ -4,7 +4,7 @@ const Loan = require('./models/loan');
 const nodemailer = require('nodemailer');
 
 const port = 3000;
-const db = 'mongodb+srv://moon_12:moon1234@cluster1.uxowe.mongodb.net/loan?retryWrites=true&w=majority';
+const db = 'mongodb+srv://user_name:<password>@cluster1.uxowe.mongodb.net/collection_name?retryWrites=true&w=majority';
 const app = express();
 
 
@@ -159,8 +159,7 @@ app.get('/customer/loanlist/:id', (req, res) => {
             console.log(err)
         });
         
-});
-
+}
 app.get('/loanlist', (req, res) => {
     let data = req.query;
     

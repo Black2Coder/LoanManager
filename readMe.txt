@@ -8,11 +8,11 @@
 
                      To connect MongoDB database 
 
-const db = 'mongodb+srv://moon_12:moon1234@cluster1.uxowe.mongodb.net/loan?retryWrites=true&w=majority';
+const db = 'mongodb+srv://user_name:<password>@cluster1.uxowe.mongodb.net/collection_name?retryWrites=true&w=majority';
 
-                    username : moon_12
-                    password : moon1234
-                    database/collection :loan
+                    username : 
+                    password : 
+                    database/collection :
 
                     Dependencies :
 
