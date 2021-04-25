@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const con = mysql.createConnection({
-    user:'uday',
-    passoword:'uday1234',
+    user:'root',
+    password:'12345678',
     host:'localhost',
-    insecureAuth:true
+    database: 'loan'
 });
 con.connect(function(err){
     if(!err){
@@ -14,3 +14,15 @@ con.connect(function(err){
         console.log(err)
     }
 });
+
+var sql= 'alter table Loan modify phone BIGINT;'
+
+con.query(sql,(err, result)=>{
+    if(err){
+        console.log(err)
+    }
+    else{
+        console.log('table created!'+" "+result)
+    }
+})
+
