@@ -42,26 +42,17 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
     let data = req.query;
-    if (req.method === 'GET') {
-        const newloan = new Loan({
-            customername: data.name,
-            email: data.email,
-            phone: data.phone,
-            amount: data.amount,
-            adhar: data.adhar
-        });
-        newloan.save()
-            .then((result) => {
-                res.redirect('/loanlist')
-
-            })
-            .catch((err) => {
-                console.log(err)
-
-            })
-    }
-
-    res.render('home')
+    console.log(data.name)
+    var sql = `insert into Loan(customername, email, phone, amount, pancard) values(?, ?, ?, ?, ?);`;
+    con.query(sql,[data.name,data.email,data.phone,data.amount,data.adhar],(err, result)=>{
+        if(err){
+            console.log(err)
+        }
+        else{
+            console.log(result)
+        }
+    })
+    res.render('home');
 });
 app.get('/home', (req, res) => {
     let data = req.query;
